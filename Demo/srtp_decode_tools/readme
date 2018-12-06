@@ -1,0 +1,16 @@
+usage：
+秘钥需要转换为base64通过srtpkeyconvert.py
+AES  128 :
+
+./rtp_decoder -t 4 -e 128 -b ETTzxmOjaJ+PZe0WLxFpiln49HZwSEb0q/uKokUD < ./ff_h264.pcap | text2pcap -t "%M:%S." -u 10000,10000 - - > ./h264_rtp.pcap
+
+./rtp_decoder -t 10 -e 128 -b QaOpfxSI0BJ9MTQqdfk+hDc4vd/snqI0+bVWAuGI < ./srtcp.pcap | text2pcap -t "%M:%S." -u 10000,10000 - - > ./rtcp.pcap
+
+ 
+
+AES  256:
+
+./rtp_decoder -e 256 -b Pw1HMS1SjyqFUE8RnqLz6y82M0LMPRtp+zu43vc+XMgBK4+fXTSS6vBlkCR0Xg== < ./129.pcap | text2pcap -t "%M:%S." -u 10000,10000 - - > ./out.pcap
+
+
+
